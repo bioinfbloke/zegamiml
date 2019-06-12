@@ -10,6 +10,7 @@ import logging
 import numpy as np
 import pandas as pd
 
+MISSING_MATPLOTLIB = False
 try:
     import matplotlib.pyplot as plt
 except ImportError:

@@ -43,6 +43,6 @@ optional arguments:
 ## Example
 
 ```
-zegamiML -i /test/zegami.tab  -o ./zegami_UMAP.tab -d ./test/imgs -c path -a UMAP -p
+./zegamiML -i ./test/zegami.tab  -o ./zegami_UMAP.tab -d ./test/imgs -c path -a UMAP -p
 ```
 
