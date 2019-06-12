@@ -1,6 +1,6 @@
 # zegamiML
 
-## Requiarements
+## Requirements
 
 * Python 3.5+
 * Python modules:
@@ -11,7 +11,7 @@
   * [umap](https://github.com/lmcinnes/umap)
   * [matplotlib](https://matplotlib.org/) (required only for plotting)
 
-This tool performs unsupervised dimensionality reduction using one of the currently supported analyses types (PCA, tSNE or UMAP) and appends two new columns with coordinates of the first two components or the embeding to the tab delimited zegami table. This table can be later used in the zegami platform to further analyse the data.
+This tool performs unsupervised dimensionality reduction using one of the currently supported analyses types (PCA, tSNE or UMAP) and appends two new columns with coordinates of the first two components of the embeding to the tab-delimited zegami table. This table can be later used in the zegami platform to further analyse the data.
 
 ## Usage 
 
@@ -43,6 +43,6 @@ optional arguments:
 ## Example
 
 ```
-zegamiML -i /test/zegami.tab  -o ./zegami_UMAP.tav -d ./test/imgs -c path -a UMAP -p
+zegamiML -i /test/zegami.tab  -o ./zegami_UMAP.tab -d ./test/imgs -c path -a UMAP -p
 ```
 
