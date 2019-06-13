@@ -120,7 +120,7 @@ def reduce_and_plot(zegami_table_in, zegami_table_out, image_path,
     zt = pd.read_csv(zegami_table_in, sep = "\t", header = 0)
     rows, cols = zt.shape
     if cols < 2:
-        err_msg = (f"Zegami table of an invalid shape {rows} x {cols}." 
+        err_msg = (f"Zegami table of an invalid shape {rows} x {cols}."
                    "Make sure input is tab-deliminated.")
         logging.error(err_msg)
         raise Exception(err_msg)
@@ -139,8 +139,9 @@ def reduce_and_plot(zegami_table_in, zegami_table_out, image_path,
     y_label = analysis_type + "_y"
     
     # merge input and reduced data frames
-    reduced_df.rename(index = str, 
-                      columns = {'x': x_label, 'y': y_label})
+    reduced_df = reduced_df.rename(index = str, 
+                                   columns = {'x': x_label, 
+                                              'y': y_label})
     reduced_df[image_col] = [os.path.basename(image_fp) for image_fp in images
             if image_fp not in skipped]
     
@@ -151,7 +152,7 @@ def reduce_and_plot(zegami_table_in, zegami_table_out, image_path,
         if MISSING_MATPLOTLIB:
             logging.error("Matplotlib module not installed! Cannot plot.")
         else:
-            plt.scatter(reduced_df['x'], reduced_df['y'])
+            plt.scatter(reduced_df[x_label], reduced_df[y_label])
             plt.show()
     
     # save output

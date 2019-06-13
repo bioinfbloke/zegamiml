@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* Python 3.5+
+* Python 3.6+
 * Python modules:
   * [NumPy](https://www.numpy.org/)
   * [pandas](https://pandas.pydata.org/)
